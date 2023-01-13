@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/WarehouseRegMainFragment">
+
+    <fragment
+        android:id="@+id/WarehouseRegMainFragment"
+        android:name="com.example.autozeta.WorkshopRegMainFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_warehouse_reg_main">
+
+        <action
+            android:id="@+id/action_WarehouseRegMainFragment_to_mapsWarehouseChooserFragment"
+            app:destination="@id/mapsWarehouseChooserFragment" />
+        <argument
+            android:name="Location"
+            app:argType="com.google.android.gms.maps.model.LatLng"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_WarehouseRegMainFragment_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+        <argument
+            android:name="Services"
+            app:argType="data.Service[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsWarehouseChooserFragment"
+        android:name="com.example.autozeta.MapsWorkshopChooserFragment"
+        android:label="fragment_maps_warehouse_chooser"
+        tools:layout="@layout/fragment_maps_warehouse_chooser" >
+        <argument
+            android:name="lat"
+            app:argType="java.lang.Double" />
+        <argument
+            android:name="long"
+            app:argType="java.lang.Double" />
+        <action
+            android:id="@+id/action_mapsWarehouseChooserFragment_to_WarehouseRegMainFragment"
+            app:destination="@id/WarehouseRegMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.example.autozeta.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/action_servicesFragment_to_WarehouseRegMainFragment"
+            app:destination="@id/WarehouseRegMainFragment" />
+        <argument
+            android:name="Services"
+            app:argType="data.Service[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
