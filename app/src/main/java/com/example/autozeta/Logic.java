@@ -333,7 +333,7 @@ public class Logic {
     }
     private static void sendNotification(JSONObject notification, Context context){
         final String FCM_API = "https://fcm.googleapis.com/fcm/send";
-        final String serverKey = "key="+"AAAAmN59rbA:APA91bGKh62Qd9mIzFAqb0smmfld9W6v1T3OvpeDNX6BcafSvzSyjZCZ_ssgtx3nCbHy6jVKuUnq9EqgR3WwdB0FBE0DNdUF_ZMiAkLYAhMUiwP6X3qsjDsaJTkCTlUlYd13gyhRFOyX";
+        final String serverKey = "key="+"insertKey";
         final String contentType="application/json";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(FCM_API, notification, new Response.Listener<JSONObject>() {
             @Override
