@@ -7,6 +7,51 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.autozeta.Basic.UI.home.HomeBasicFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="Pocetna Strana"
+        tools:layout="@layout/fragment_home_basic" />
+    <fragment
+        android:id="@+id/nav_chat_list"
+        android:name="com.example.autozeta.Basic.UI.chat.ChatListFragment"
+        android:label="Poruke"
+        tools:layout="@layout/fragment_chat_list" />
+    <fragment
+        android:id="@+id/nav_workshops"
+        android:name="com.example.autozeta.Basic.UI.workshops.WorkshopsSearchFragment"
+        android:label="Pronadji Radionice"
+        tools:layout="@layout/fragment_chat_list" >
+        <action
+            android:id="@+id/action_nav_workshops_to_nav_workshops_list"
+            app:destination="@id/nav_workshops_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_workshops_list"
+        android:name="com.example.autozeta.Basic.UI.workshops.WorkshopsListFragment"
+        android:label="Radionice"
+        tools:layout="@layout/fragment_workshops_list" />
+    <fragment
+        android:id="@+id/nav_saved"
+        android:name="com.example.autozeta.Basic.UI.saved.SavedFragment"
+        android:label="Zapamcene Radionice"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/nav_cars"
+        android:name="com.example.autozeta.Basic.UI.cars.CarsFragment"
+        android:label="Moji Automobili"
+        tools:layout="@layout/fragment_car_list" >
+        <action
+            android:id="@+id/action_carsFragment_to_carInfoFragment"
+            app:destination="@id/nav_car_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_car_info"
+        android:name="com.example.autozeta.Basic.UI.cars.CarInfoFragment"
+        android:label="Automobil" />
+    <fragment
+        android:id="@+id/nav_termini"
+        android:name="com.example.autozeta.Basic.UI.termini.TerminiListFragment"
+        android:label="Termini" />
+    <fragment
+        android:id="@+id/nav_zakazaniTermini"
+        android:name="com.example.autozeta.Basic.UI.zakazaniTermini.ZakazaniTerminiListFragment"
+        android:label="Zakazani Termini" />
 </navigation>

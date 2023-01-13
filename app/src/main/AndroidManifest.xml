@@ -7,23 +7,43 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AutOZeTA">
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_message_24" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="Notifikacije" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         <activity
-            android:name=".WorkshopRegActivity"
-            android:label="@string/title_activity_warehouse_reg"
-            android:theme="@style/Theme.AutOZeTA.NoActionBar">
-
-
-
-        </activity>
+            android:name=".LoginAndRegistration.WorkshopRegActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -38,21 +58,64 @@
 
         <activity
             android:name=".Owner.HomeOwnerActivity"
-            android:label="@string/title_activity_home_owner"
-            android:theme="@style/Theme.AutOZeTA.NoActionBar" >
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Basic.HomeBasicActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"></activity>
+        <activity android:name=".HomeActivity"
+            android:configChanges="orientation"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LoginAndRegistration.LoginActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginAndRegistration.RegisterActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Basic.UI.chat.ChatActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar" />
+        <activity
+            android:name=".Basic.UI.workshops.WorkshopActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Basic.UI.workshops.workshopPages.ReviewFragment"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Basic.UI.termini.TerminActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Basic.UI.zakazaniTermini.ZakazanTerminActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Owner.ui.zakazaniTermini.ZakazanTerminOwnerActivity"
+            android:theme="@style/Theme.AutOZeTA.NoActionBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -10,10 +10,16 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
-import com.example.autozeta.LoginActivity;
+import com.example.autozeta.LoginAndRegistration.LoginActivity;
 import com.example.autozeta.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class HomeFragment extends Fragment {
 
@@ -30,14 +36,41 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-        btnLogout = root.findViewById(R.id.btnlogout);
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
+        root.findViewById(R.id.layoutAuto).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intToMain = new Intent(getActivity(),LoginActivity.class);
-                startActivity(intToMain);
+                Navigation.findNavController(root).navigate(R.id.nav_calendar_owner);
+            }
+        });
+
+        root.findViewById(R.id.layoutPoruke).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(root).navigate(R.id.nav_chat_list);
+            }
+        });
+        root.findViewById(R.id.layoutRadionice).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(root).navigate(R.id.nav_modify);
+            }
+        });
+        root.findViewById(R.id.layoutSaved).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(root).navigate(R.id.nav_ocene);
+            }
+        });
+        root.findViewById(R.id.layoutTermin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(root).navigate(R.id.nav_termini);
+            }
+        });
+        root.findViewById(R.id.layoutZakazanTermin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(root).navigate(R.id.nav_zakazaniTermini);
             }
         });
         return root;

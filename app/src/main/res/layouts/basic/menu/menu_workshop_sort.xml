@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/location_rising"
+        android:orderInCategory="100"
+        android:title="Daljini Rastuce"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/location_falling"
+        android:orderInCategory="100"
+        android:title="Daljini Opadajuce"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/workprice_rising"
+        android:orderInCategory="100"
+        android:title="Ceni Rada Rastuce"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/workprice_falling"
+        android:orderInCategory="100"
+        android:title="Ceni Rada Opadajuce"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rating_rising"
+        android:orderInCategory="100"
+        android:title="Oceni Rastuce"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/rating_falling"
+        android:orderInCategory="100"
+        android:title="Oceni Opadajuce"
+        app:showAsAction="never" />
+</menu>

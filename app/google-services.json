@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "656567807408",
+    "firebase_url": "https://autozeta-cc1c0-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "autozeta-cc1c0",
+    "storage_bucket": "autozeta-cc1c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656567807408:android:272cd7a2db768350727a75",
+        "android_client_info": {
+          "package_name": "com.example.autozeta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656567807408-8karr8rjeira8rmtrqqj3tjmajju29u2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr5ViPaknhpaNipEDQ8J42W-HgNWlvdUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656567807408-8karr8rjeira8rmtrqqj3tjmajju29u2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

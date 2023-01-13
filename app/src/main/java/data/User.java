@@ -5,6 +5,7 @@ public class User {
     public String ime;
     public String prezime;
     public String userType;
+    public String imeRadionice;
 
     public User(){}
     public User(String i,String p,String uT)

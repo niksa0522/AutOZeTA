@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/WarehouseRegMainFragment"
-        android:name="com.example.autozeta.WorkshopRegMainFragment"
+        android:name="com.example.autozeta.LoginAndRegistration.WorkshopRegMainFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_warehouse_reg_main">
 
@@ -30,8 +30,8 @@
     </fragment>
     <fragment
         android:id="@+id/mapsWarehouseChooserFragment"
-        android:name="com.example.autozeta.MapsWorkshopChooserFragment"
-        android:label="fragment_maps_warehouse_chooser"
+        android:name="com.example.autozeta.LoginAndRegistration.MapsWorkshopChooserFragment"
+        android:label="Izaberi Lokaciju"
         tools:layout="@layout/fragment_maps_warehouse_chooser" >
         <argument
             android:name="lat"
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/servicesFragment"
-        android:name="com.example.autozeta.ServicesFragment"
+        android:name="com.example.autozeta.LoginAndRegistration.ServicesFragment"
         android:label="fragment_services"
         tools:layout="@layout/fragment_services" >
         <action

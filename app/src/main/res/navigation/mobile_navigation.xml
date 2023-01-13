@@ -8,18 +8,60 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.autozeta.Owner.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="Pocetna Strana"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.autozeta.Owner.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_chat_list"
+        android:name="com.example.autozeta.Basic.UI.chat.ChatListFragment"
+        android:label="Poruke"
+        tools:layout="@layout/fragment_chat_list" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.autozeta.Owner.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_ocene"
+        android:name="com.example.autozeta.Owner.ui.Reviews.ReviewsOwnerFragment"
+        android:label="Ocene i Komentari"
+        tools:layout="@layout/fragment_reviews_owner" />
+    <fragment
+        android:id="@+id/nav_termini"
+        android:name="com.example.autozeta.Basic.UI.termini.TerminiListFragment"
+        android:label="Termini" />
+    <fragment
+        android:id="@+id/nav_zakazaniTermini"
+        android:name="com.example.autozeta.Owner.ui.zakazaniTermini.ZakazaniTerminiOwnerListFragment"
+        android:label="Zakazani Termini" />
+    <fragment
+        android:id="@+id/nav_modify"
+        android:name="com.example.autozeta.Owner.ui.workshopModify.WorkshopModifyFragment"
+        android:label="Radionica" >
+        <action
+            android:id="@+id/action_nav_modify_to_mapsWorkshopChooserFragment"
+            app:destination="@id/mapsWorkshopChooserFragment" />
+        <argument
+            android:name="Location"
+            app:argType="com.google.android.gms.maps.model.LatLng"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_calendar_owner"
+        android:name="com.example.autozeta.Owner.ui.kalendarAktivnosti.CalendarOwnerFragment"
+        android:label="Kalendar Aktivnosti" />
+    <fragment
+        android:id="@+id/mapsWorkshopChooserFragment"
+        android:name="com.example.autozeta.LoginAndRegistration.MapsWorkshopChooserFragment"
+        android:label="Izaberi Lokaciju"
+        tools:layout="@layout/fragment_maps_warehouse_chooser">
+    <action
+        android:id="@+id/action_servicesFragment_to_WarehouseRegMainFragment"
+        app:destination="@id/nav_modify" />
+        <argument
+            android:name="lat"
+            app:argType="java.lang.Double" />
+        <argument
+            android:name="long"
+            app:argType="java.lang.Double" />
+        <action
+            android:id="@+id/action_mapsWarehouseChooserFragment_to_WarehouseRegMainFragment"
+            app:destination="@id/nav_modify" />
+    </fragment>
+
 </navigation>

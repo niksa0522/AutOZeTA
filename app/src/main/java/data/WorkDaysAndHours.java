@@ -1,5 +1,7 @@
 package data;
 
+import java.util.Objects;
+
 public class WorkDaysAndHours {
 
     private String days;
@@ -54,6 +56,21 @@ public class WorkDaysAndHours {
         this.startTime=st;
         this.endTime=et;
         this.isOpen=io;
+    }
+    public WorkDaysAndHours(String d, boolean io){
+        this.days=d;
+        this.isOpen=io;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WorkDaysAndHours that = (WorkDaysAndHours) o;
+        return isOpen == that.isOpen &&
+                days.equals(that.days) &&
+                startTime.equals(that.startTime) &&
+                endTime.equals(that.endTime);
     }
 
 }

@@ -20,5 +20,24 @@ tools:openDrawer="start">
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
     app:headerLayout="@layout/nav_header_main_basic"
-    app:menu="@menu/activity_main_drawer_basic" />
+    app:menu="@menu/activity_main_drawer_basic" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            style="?attr/textAppearanceSubtitle2"
+            android:text="Odjavi se"/>
+    </LinearLayout>
+
+</com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

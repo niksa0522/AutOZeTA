@@ -6,15 +6,48 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Pocetna Strana" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_chat_list"
+            android:icon="@drawable/ic_baseline_message_24"
+            android:title="Poruke" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/subtitle2"
+            android:title="Termini">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_termini"
+                        android:icon="@drawable/ic_baseline_forum_24"
+                        android:title="Termini" />
+                    <item
+                        android:id="@+id/nav_zakazaniTermini"
+                        android:icon="@drawable/ic_baseline_event_24"
+                        android:title="Zakazani Termini" />
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/subtitle"
+            android:title="Radionice">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_workshops"
+                        android:icon="@drawable/ic_baseline_search_24"
+                        android:title="Pronadji Radionice" />
+                    <item
+                        android:id="@+id/nav_saved"
+                        android:icon="@drawable/ic_baseline_bookmark_24"
+                        android:title="Zapamcene Radionice" />
+                    <item
+                        android:id="@+id/nav_cars"
+                        android:icon="@drawable/ic_baseline_directions_car_24"
+                        android:title="Moji Automobili" />
+                </group>
+            </menu>
+        </item>
     </group>
+
 </menu>

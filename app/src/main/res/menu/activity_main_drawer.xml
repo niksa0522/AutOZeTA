@@ -3,18 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Pocetna Strana" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_chat_list"
+            android:icon="@drawable/ic_baseline_message_24"
+            android:title="Poruke" />'
     </group>
+            <item
+                android:id="@+id/subtitle"
+                android:title="Termini">
+                <menu>
+                    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_termini"
+            android:icon="@drawable/ic_baseline_forum_24"
+            android:title="Termini" />
+        <item
+            android:id="@+id/nav_zakazaniTermini"
+            android:icon="@drawable/ic_baseline_event_24"
+            android:title="Zakazani Termini" />
+                    </group>
+                </menu>
+            </item>
+
+            <item
+                android:id="@+id/subtitle2"
+                android:title="O Radionici">
+                <menu>
+                    <group android:checkableBehavior="single"
+                        android:id="@+id/group3">
+                    <item
+                        android:id="@+id/nav_modify"
+                        android:icon="@drawable/ic_baseline_garage_24"
+                        android:title="Radionica" />
+                    <item
+                        android:id="@+id/nav_calendar_owner"
+                        android:icon="@drawable/ic_baseline_calendar_today_24"
+                        android:title="Kalendar Aktivnosti" />
+                        <item
+                            android:id="@+id/nav_ocene"
+                            android:icon="@drawable/ic_baseline_reviews_24"
+                            android:title="Ocene i Komentari" />
+                    </group>
+                </menu>
+            </item>
+
 </menu>
